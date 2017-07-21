@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find hdf_model)/robots/hdf_model.urdf -urdf -model hdf_model"
+    output="screen" />
+
+ 
+
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">	    
+		<arg name="world_name" value="$(find hdf_gazebo)/worlds/hdf.world"/>	    
+		<arg name="gui" value="true"/>	  
+	</include>
+
+</launch>

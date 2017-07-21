@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="sonar_sensor" params="name parent *origin ros_topic update_rate min_range max_range field_of_view ray_count">
+
+    <gazebo reference="ultrasonic_link_right_1">
+      <sensor type="ray" name="ultrasonic_sensor">
+        <always_on>true</always_on>
+        <update_rate>10</update_rate> <!-- not correct value-->
+        <pose>-0.13 0.26 0.005 0 0 2.0944</pose>        
+        <visualize>true</visualize>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>100</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.130899694</ min_angle>
+              <max_angle>00.130899694</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>100</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.130899694</min_angle>
+              <max_angle>00.130899694</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.02</min>
+            <max>4.00</max>
+            <resolution>0.01</resolution>
+          </range>
+        </ray>
+
+        <plugin name="gazebo_ros_ultrasonic_controller" filename="libhector_gazebo_ros_sonar.so">
+          <gaussianNoise>0.005</gaussianNoise>
+          <topicName>range/distance</topicName>
+          <frameId>ultrasonic_link_right_1</frameId>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+  </xacro:macro>
+</robot>
