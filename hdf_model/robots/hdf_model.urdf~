@@ -250,8 +250,8 @@
     name="ultrasonic_joint_right_1"
     type="fixed">
     <origin
-        xyz="-0.13 0.26 0.005"
-        rpy="0 0 2.0944" />
+        xyz="-0.22 0.13 0.005"
+        rpy="0 0 2.61799" />
     <parent
       link="base_link" />
     <child
@@ -265,17 +265,126 @@
     name="ultrasonic_link_right_1">
     <inertial>
       <origin
+        xyz="-0.16 0.23 0.005"
+        rpy="0 0 4.18879" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.1"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>	
+    <visual> 
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 0" />
+      <geometry>
+         <box size="0.001 0.045 0.02"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.423529 0.0392154 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.13 0.23 0.005"
+        rpy="0 1.5708 4.18879" />
+      <geometry>
+         <box size="0.045 0.02 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+   <joint
+    name="ultrasonic_joint_right_2"
+    type="fixed">
+    <origin
+        xyz="-0.13 0.26 0.005"
+        rpy="0 0 2.0944" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_link_right_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>  
+        
+
+ <link
+    name="ultrasonic_link_right_2">
+    <inertial>
+      <origin
         xyz="-0.13 0.23 0.005"
         rpy="0 0 4.18879" />
       <mass
-        value="1.0" />
+        value="0.1" />
       <inertia
-        ixx="1.0"
+        ixx="0.1"
         ixy="0.0"
         ixz="0.0"
-        iyy="1.0"
+        iyy="0.1"
         iyz="0.0"
-        izz="1.0" />
+        izz="0.1" />
+    </inertial>	
+    <visual> 
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 0" />
+      <geometry>
+         <box size="0.001 0.045 0.02"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.423529 0.0392154 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.13 0.23 0.005"
+        rpy="0 1.5708 4.18879" />
+      <geometry>
+         <box size="0.045 0.02 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+   <joint
+    name="ultrasonic_joint_right_3"
+    type="fixed">
+    <origin
+        xyz="0.08 0.20 0.005"
+        rpy="0 0 -2.0944" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_link_right_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>  
+        
+
+ <link
+    name="ultrasonic_link_right_3">
+    <inertial>
+      <origin
+        xyz="-0.13 0.23 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.1"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
     </inertial>	
     <visual> 
       <origin
@@ -305,7 +414,7 @@
     type="fixed">
     <origin
         xyz="-0.13 -0.26 0.005"
-        rpy="0 0 1.74533" />
+        rpy="0 0 4.88692" />
     <parent
       link="base_link" />
     <child
@@ -321,14 +430,14 @@
         xyz="0 0 0.01"
         rpy="0 0 -2.35619" />
       <mass
-        value="1.0" />
+        value="0.1" />
       <inertia
-        ixx="1.0"
+        ixx="0.1"
         ixy="0.0"
         ixz="0.0"
-        iyy="1.0"
+        iyy="0.1"
         iyz="0.0"
-        izz="1.0" />
+        izz="0.1" />
     </inertial>	
     <visual> 
       <origin
@@ -352,6 +461,113 @@
       </geometry>
     </collision>
   </link>
+
+   <joint
+    name="ultrasonic_joint_left_2"
+    type="fixed">
+    <origin
+        xyz="-0.13 -0.26 0.005"
+        rpy="0 0 4.88692" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_link_left_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint> 
+
+<link
+    name="ultrasonic_link_left_2">
+    <inertial>
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 -2.35619" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.1"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>	
+    <visual> 
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 2.35619" />
+      <geometry>
+         <box size="0.001 0.045 0.02"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.423529 0.0392154 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.13 0.23 0.005"
+        rpy="0 1.5708 4.18879" />
+      <geometry>
+         <box size="0.045 0.02 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+   <joint
+    name="ultrasonic_joint_left_3"
+    type="fixed">
+    <origin
+        xyz="-0.13 -0.26 0.005"
+        rpy="0 0 4.88692" />
+    <parent
+      link="base_link" />
+    <child
+      link="ultrasonic_link_left_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint> 
+
+<link
+    name="ultrasonic_link_left_3">
+    <inertial>
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 -2.35619" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.1"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.1"
+        iyz="0.0"
+        izz="0.1" />
+    </inertial>	
+    <visual> 
+      <origin
+        xyz="0 0 0.01"
+        rpy="0 0 2.35619" />
+      <geometry>
+         <box size="0.001 0.045 0.02"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.423529 0.0392154 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.13 0.23 0.005"
+        rpy="0 1.5708 4.18879" />
+      <geometry>
+         <box size="0.045 0.02 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
 
   <joint
     name="ultrasonic_joint_centre_1"
@@ -516,6 +732,7 @@
   </sensor>
  </gazebo> 
 
+
  <gazebo reference="ultrasonic_link_left_1">
 	<sensor type="ray" name="sonar">
           <pose>0 0 0 0 0 0</pose> 
@@ -590,7 +807,7 @@
             <radiation>ultrasound</radiation>
           </plugin>
   </sensor>
- </gazebo>
+ </gazebo>  
 
 <gazebo reference="laser_link">
 	    <material>Gazebo/Blue</material>
@@ -620,7 +837,7 @@
                   stddev of 0.01m will put 99.7% of samples within 0.03m of the true
                   reading. -->
                  <mean>0.0</mean>
-                  <stddev>0.01</stddev>
+                  <stddev>0.00</stddev> 
                 </noise>
 	      </ray>
 	      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
